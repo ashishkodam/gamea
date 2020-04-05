@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Chain Reaction Game</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  link to the stylesheet -->
+    <link href="../css/style.css" rel="stylesheet" type="text/css">
+    <!--   link to the JS! -->
+    <script defer type="text/javascript" src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@egoist/snackbar/dist/snackbar.min.css"/>
+    <script src="https://unpkg.com/@egoist/snackbar/dist/snackbar.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 align="center">Chain Reaction</h1>
+    </header>
+    <main>
+        <section>
+            <div class="section-body">
+                <div align="center">
+                    <h2 style="color: white;margin: 0px;padding-top: 10px;" align="center">Select The Buttom </h2>
+                    <div align="center">
+
+
+                        <ul id="room" style="list-style: none;">
+                            <li>
+                                <input type="radio" name="gameType" id="radio_new" value="0"
+                                    onclick="OnChangeRadio (this)" />
+                                <label for="radio_new">Create A Room</label>
+                                <!-- <input type="radio" id="newRoom" name="createRoom" value="newroom" onclick="OnChangeRadio(this)">
+                                <label>Create A Room</label><br> -->
+                            </li>
+                            <li>
+                                <input type="radio" name="gameType" id="radio_join" value="1"
+                                    onclick="OnChangeRadio (this)" />
+                                <label for="radio_join">Join A Room</label>
+                                <!-- <input type="radio" id="joinRoom" name="exestingRoom" value="room" onclick="OnChangeRadio(this)">
+                                <label >Join A Room</label><br> -->
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="card" id="card-style">
+                  
+                    <br>
+                    <br>
+                    
+                        <div class="gameboard-container">
+                            <div id="mygameboard"></div>
+                        </div>
+                        <div class="newRoom" id="nR">
+                            <form id="newGameRoom">
+                                <div class="player-container" style="display: flex;
+                                flex-direction: column;
+                                flex-grow: 1;
+                                padding: 3%;
+                                color: white; ">
+                                    <h2 id="changF-text">Enter details of players</h2>
+                                    <div class="player-input">
+                                        <div id="first"><img src="../assets/images/user.png"></div>
+                                        <div id="secoud">
+                                            <div class="input">
+                                                <label>Enter Player Name : </label>
+                                                <input type="text" name="fnametext">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+    
+                                    <div class="container">
+                                        <input type="button" name="newgame" value="New Game" id="mainButton">
+                                        <p id="showMessage"></p>
+                                        <h2 class="winner hide" style="float: right;"></h2>
+                                        <br>
+                                        <!-- <input type="button" name="newgame" value="Restart" id="restartButton" onclick="restartFunction()"> -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="joinRoom" id="jR">
+                        
+                            <form id="joinGameRoom">
+                                <div class="player-container" style="display: flex;
+                                flex-direction: column;
+                                flex-grow: 1;
+                                padding: 3%;
+                                color: white; ">
+                                    <h2 id="changing-text">Enter details of players</h2>
+                                    <div class="player-input">
+                                        <div id="first"><img src="../assets/images/user.png"></div>
+                                        <div id="secoud">
+                                            <div class="input">
+                                                <label>Enter Player Name : </label>
+                                                <input type="text" name="snametext">
+                                            </div>
+                                            <br>
+                                            <div class="input">
+                                                <label>Enter Room Number : </label>
+                                                <input type="text" name="roomnumber">
+                                            </div>
+    
+                                        </div>
+                                        
+                                    </div>
+    
+                                   
+                                    <div class="container">
+                                        <input type="button" name="joinGame" value="Join Game" id="joinButton">
+                                        <h2 class="winner hide" style="float: right;"></h2>
+                                        <br>
+                                        <!-- <input type="button" name="newgame" value="Restart" id="restartButton" onclick="restartFunction()"> -->
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2020 <span style="float:right;">Contact information:
+                ashishk@nmsu.edu. </span></p>
+
+    </footer>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+
+</html>

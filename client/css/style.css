@@ -1,0 +1,347 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+header{
+background-color: #121110;
+}
+header h1 {
+    text-align: center;
+    margin: 0px;
+    padding:1% 0%;
+    color: #FC4F00;
+
+}
+
+
+main {
+    height: 90%;
+}
+
+section {
+    background: #25272C;
+     height:100%
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #121110;
+    color: white;
+       
+}
+#room li{
+    float: left;
+    color: white;
+    text-align: center;
+    margin-left: 400px;
+}
+
+
+html main section .section-body ,body main section .section-body  {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+html main section .section-body .card,body main section .section-body .card {
+    /* min-height: 80vh; */
+   display: -webkit-box;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    background: #3a3b3c;
+    margin: 20px;
+    padding: 5%;
+    border-radius: 25px;
+    box-shadow: 20px 20px 20px #1C1E21;
+};
+
+
+html main section .section-body .card div ,body main section .section-body .card div {
+    display: flex;
+    justify-content: center;
+}
+
+html main section .section-body .card  div.gameboard-container,body main section .section-body .card  div.gameboard-container{
+    display: flex;
+    justify-content: center;
+}
+
+html main section .section-body .card  div.gameboard-container div,body main section .section-body .card  div.gameboard-container div{
+      
+    display: flex;
+    flex-wrap: wrap;
+  
+}
+
+
+
+html main section .section-body .card  div.gameboard-container div#mygameboard,body main section .section-body .card  div.gameboard-container div#mygameboard{
+    color: white;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #1D1F20;
+}
+html main section .section-body .card  div.gameboard-container div#mygameboard.freeze,body main section .section-body .card  div.gameboard-container div#mygameboard.freeze{
+    pointer-events: none;
+}
+
+html main section .section-body .card  div.gameboard-container div#mygameboard .box,body main section .section-body .card  div.gameboard-container div#mygameboard .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+    border: 1px solid #5F5F5F;
+    background-color: #1D1F20;
+    transition: all 100ms ease-in-out;
+}
+
+html main section .section-body .card  div.gameboard-container div#mygameboard .box:hover,body main section .section-body .card  div.gameboard-container div#mygameboard .box:hover{
+    background-color: rgb(155, 152, 152);
+}
+html main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container, body main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+    html main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container.two, body main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container.two {
+      animation: spin 2s linear infinite; }
+    html main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container.three, body main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container.three {
+      animation: spin 1s linear infinite; }
+    html main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container.one, body main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container.one {
+      animation: spin 3s linear infinite; }
+      html main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container.one .atom, body main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container.one .atom {
+        animation: shiver 0.1s linear infinite; }
+    html main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container .atom, body main section .section-body .card  div.gameboard-container div#mygameboard .box .atom-container .atom {
+      margin: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%; }
+
+
+html main section .section-body .card div.player-container div,body main section .section-body .card div.player-container div {
+    display: -webkit-box;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+
+html main section .section-body .card div.player-container div.player-input,body main section .section-body .card div.player-container div.player-input {
+    display: -webkit-box;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+    html main section .section-body .card div.player-container div.player-input div img,body main section .section-body .card div.player-container div.player-input div img {
+        width: 100px;
+        height: 100px;
+    }
+    html main section .section-body .card div.player-container div.player-input #third,body main section .section-body .card div.player-container div.player-input #third {
+       margin-top: 15px;
+    }
+    html main section .section-body .card div.player-container div.player-input #fourth,body main section .section-body .card div.player-container div.player-input #fourth {
+        width: 50px;
+        height: 25px;
+        border-radius: 25px;
+        background-color: #70f832;
+        margin-top: 15px;
+        
+     }
+     html main section .section-body .card div.player-container div.player-input #fourth,body main section .section-body .card div.player-container div.player-input #fourth {
+        display: none;
+     }
+     .atom-container{
+     animation: spin 3s linear infinite;
+     }
+/* html main section.section-body .card  #details,body main section.section-body .card .card-container #details{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 10px;
+    color: white;
+} */
+ 
+
+html .container input[type=button], body .container input[type=button] {
+    width: 200px;
+    border: none;
+    outline: none;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 1em;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: lighter;
+    background:linear-gradient(to right, #f85032, #e73827);
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0px 14px 7px -13px #e73827; 
+}
+
+ul{
+    list-style: none;
+    
+}
+.winner{
+    background-image: linear-gradient(to right,#1e9600, #fff200, #ff0000);
+    background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.input{
+    padding: 10px;
+    margin: 10px;
+    background: #1D2024;
+    border-radius: 15px;
+}
+
+.input label{
+    color: #C03E36;
+}
+#list-body img{
+    width: 100px;
+    height: 100px;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+    button:focus {outline:none;}
+    @media (max-width: 801px) {
+      html  .container input[type=button], body  .container input[type=button] {
+        width: 100%; } 
+    }
+    html  .container input[type=button]:hover, body  .container input[type=button]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0px 10px 16px -6px gray; 
+    }
+
+    @media only screen and (max-width: 600px) {
+       
+        html main section .section-body .card div.player-container div.player-input div img,body main section .section-body .card div.player-container div.player-input div img {
+            width: 50px;
+            height: 50px;
+        }
+        .input{
+            padding: 10px;
+            margin: 10px;
+            background: #1D2024;
+            border-radius: 15px;
+            width: 160px;
+        } 
+        html main section .section-body .card div.player-container div,body main section .section-body .card div.player-container div {
+            display: block;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        html main section .section-body .card, body main section .section-body .card {
+            /* min-height: 80vh; */
+            display: block;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            background: #25272C;
+            margin: 0px;
+            padding: 5%;
+            border-radius: 25px;
+            box-shadow: 20px 20px 20px #1C1E21;
+        }
+       
+    }
+
+        footer{
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #121110;
+            color: white;
+        }
+    @media only screen and (max-width:320px){
+        html{
+            width: 370px;
+        }
+    }
+
+    /* @media only screen and (min-width: 600px) {
+        html main section .section-body .card, body main section .section-body .card {
+           
+            display: block;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            background: #25272C;
+            margin: 0px;
+            padding: 5%;
+            border-radius: 25px;
+            box-shadow: 20px 20px 20px #1C1E21;
+        }
+    } */
+    @media only screen and (max-width: 800px) {
+        html main section .section-body .card div.player-container div.player-input div img,body main section .section-body .card div.player-container div.player-input div img {
+            width: 50px;
+            height: 50px;
+        }
+        .input{
+            padding: 10px;
+            margin: 10px;
+            background: #1D2024;
+            border-radius: 15px;
+            width: 160px;
+        } 
+        html main section .section-body .card div.player-container div,body main section .section-body .card div.player-container div {
+            display: block;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+        }
+        html main section .section-body .card, body main section .section-body .card {
+            /* min-height: 80vh; */
+            /* display: block; */
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: center;
+            background: #3a3b3c;
+            margin: 0px;
+            padding: 5%;
+            border-radius: 25px;
+            box-shadow: 20px 20px 20px #1C1E21;
+        }
+    }
+
+
+
+@media only screen and (max-width: 600px) {
+    #room li{
+        float: left;
+        color: white;
+        text-align: center;
+        margin-left: 40px;
+    }
+}
+
+
+
+
+
+
+
+
